@@ -100,14 +100,14 @@ public class Order {
     @Override
     public String toString() {
         return "Order{" +
-                "OrderID=" + orderID +
-                ", orderDate=" + orderDate +
-                ", customer=" + customer +
-                ", OrderItems=" + orderItems +
-                ", totalPrice=" + totalPrice +
-                ", status='" + status + '\'' +
-                ", addressID=" + addressID +
-                ", orderItemID=" + orderItemID +
+                ", OrderID: " + orderID +
+                ", OrderDate: " + orderDate +
+                ", Customer: " + customer +
+                ", OrderItems: " + orderItems +
+                ", TotalPrice: " + totalPrice +
+                ", Status: " + status + '\'' +
+                ", AddressID: " + addressID +
+                ", OrderItemID: " + orderItemID +
                 '}';
     }
 
@@ -161,9 +161,8 @@ public class Order {
             return this;
         }
         /*
-        *so this method below takes the elements in the builder nested class
-        * and sends them up one level to the object class or
-        * superclass
+         *so this method below takes the elements into the builder nested class
+         * and creates a copy
          */
         public Order.Builder copy(Order order) {
             this.orderID = order.orderID;
