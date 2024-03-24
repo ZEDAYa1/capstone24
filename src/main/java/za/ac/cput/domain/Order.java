@@ -2,7 +2,7 @@ package za.ac.cput.domain;
 
 /*
  *Order: java
- *Order: Model Class
+ *Order:Model Class
  * Author: Rethabile Ntsekhe (220455430)
  * Date: 24 March 2024
  */
@@ -160,7 +160,20 @@ public class Order {
             this.orderItemID = orderItemID;
             return this;
         }
-
+        /*
+        *so this method below takes the elements in the builder nested class
+        * and sends them up one level to the object class or
+        * superclass
+         */
+        public Order.Builder copy(Order order) {
+            this.orderID = order.orderID;
+            this.orderDate = order.orderDate;
+            this.customer = order.customer;
+            this.orderItems = order.orderItems;
+            this.totalPrice = order.totalPrice;
+            this.status = order.status;
+            return this;
+        }
         public Order build(){
             Order order = new Order(this);
             return order;
