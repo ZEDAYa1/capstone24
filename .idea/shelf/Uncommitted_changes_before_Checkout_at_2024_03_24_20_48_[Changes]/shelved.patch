@@ -1,0 +1,87 @@
+Index: src/main/java/za/ac/cput/repository/impl/ProductRepositoryImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package za.ac.cput.service.impl;\r\n/*\r\n *Product:java\r\n *Product: ProductRepositoryImpl Class\r\n * Author: Zachariah Matsimella\r\n * Date: 21 March 2024\r\n */\r\n\r\npublic class ProductRepositoryImpl implements IRepository{\r\n\r\n}
+===================================================================
+diff --git a/src/main/java/za/ac/cput/repository/impl/ProductRepositoryImpl.java b/src/main/java/za/ac/cput/repository/impl/ProductRepositoryImpl.java
+--- a/src/main/java/za/ac/cput/repository/impl/ProductRepositoryImpl.java	
++++ b/src/main/java/za/ac/cput/repository/impl/ProductRepositoryImpl.java	
+@@ -1,11 +1,75 @@
+-package za.ac.cput.service.impl;
++package za.ac.cput.repository.impl;
+ /*
+  *Product:java
+  *Product: ProductRepositoryImpl Class
+  * Author: Zachariah Matsimella
+  * Date: 21 March 2024
+  */
++import za.ac.cput.domain.Product;
++import za.ac.cput.repository.IProductRepository;
++import java.util.ArrayList;
++import java.util.List;
++
++public class ProductRepositoryImpl implements IProductRepository{
++    private static IProductRepository repository = null;
++    private List<Product> productList;
++
++    private ProductRepositoryImpl(){
++        productList = new ArrayList<Product>();
++    }
++
++    public static IProductRepository getRepository(){
++        if (repository == null){
++            repository = new ProductRepositoryImpl();
++        }
++        return repository;
++    }
++    @Override
++    public Product create(Product product) {
++        boolean success = productList.add(product);
++        if(success)
++            return product;
++        return null;
++    }
++
++    @Override
++    public Product read(int id) {
++        for(Product p: productList){
++            if(p.getProductID() == id){
++                return p;
++            }
++        }
++        return null;
++    }
+ 
+-public class ProductRepositoryImpl implements IRepository{
++    @Override
++    public Product update(Product product) {
++        int productID = product.getProductID();
++        if(delete(productID)){
++            if(productList.add(product)){
++                return product;
++            }else
++                return null;
++        }
++        return null;
++    }
+ 
++    @Override
++    public boolean delete(String s) {
++        return false;
++    }
++
++    @Override
++    public boolean delete(int id) {
++        Product productToDelete = read(id);
++        if(productToDelete == null){
++            return false;
++        }
++        return (productList.remove(productToDelete));
++    }
++
++    @Override
++    public List<Product> getall() {
++        return productList;
++    }
+ }
+\ No newline at end of file
