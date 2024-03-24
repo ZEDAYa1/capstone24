@@ -1,4 +1,4 @@
-package za.ac.cput.Domain;
+package za.ac.cput.domain;
 
 /*
  *Address:java
@@ -8,8 +8,8 @@ package za.ac.cput.Domain;
  */
 
 public class Address {
-    private int AddressID;
-    private String Street;
+    private int addressID;
+    private String street;
     private String city;
     private String province;
     private String zipCode;

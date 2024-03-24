@@ -8,8 +8,10 @@ package za.ac.cput.domain;
  */
 
 public class OrderItem {
-    private long id;
+    private int orderItemID;
     private Product product;
     private int quantity;
     private double unitPrice;
+
+
 }

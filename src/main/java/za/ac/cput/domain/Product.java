@@ -7,8 +7,6 @@ package za.ac.cput.domain;
  * Date: 21 March 2024
  */
 
-import java.util.List;
-
 public class Product {
     private int productID;
     private int categoryID;
@@ -98,8 +96,8 @@ public class Product {
         imageID = imageID;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    @Override
+    public String toString() {
         return "Product{" +
                 "productID=" + productID +
                 ", categoryID=" + categoryID +
