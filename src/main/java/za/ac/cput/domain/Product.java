@@ -8,14 +8,14 @@ package za.ac.cput.domain;
  */
 
 public class Product {
-    private int productID;
-    private int categoryID;
+    private String productID;
+    private String categoryID;
     private String name;
     private String description;
     private double price;
     private int stock;
-    private int reviewID;
-    private int imageID;
+    private String reviewID;
+    private String imageID;
 
     public Product() {
 
@@ -32,19 +32,19 @@ public class Product {
         this.imageID = builder.imageID;
     }
 
-    public int getProductID() {
+    public String getProductID() {
         return productID;
     }
 
-    public void setProductID(int productID) {
+    public void setProductID(String productID) {
         this.productID = productID;
     }
 
-    public int getCategoryID() {
+    public String getCategoryID() {
         return categoryID;
     }
 
-    public void setCategoryID(int categoryID) {
+    public void setCategoryID(String categoryID) {
         this.categoryID = categoryID;
     }
 
@@ -80,20 +80,20 @@ public class Product {
         this.stock = stock;
     }
 
-    public int getReviewID() {
+    public String getReviewID() {
         return reviewID;
     }
 
-    public void setReviewID(int reviewID) {
+    public void setReviewID(String reviewID) {
         this.reviewID = reviewID;
     }
 
-    public int getImageID() {
+    public String getImageID() {
         return imageID;
     }
 
-    public void setImageID(int imageID) {
-        imageID = imageID;
+    public void setImageID(String imageID) {
+        this.imageID = imageID;
     }
 
     @Override
@@ -111,21 +111,21 @@ public class Product {
     }
 
     public static class Builder{
-        private int productID;
-        private int categoryID;
+        private String productID;
+        private String categoryID;
         private String name;
         private String description;
         private double price;
         private int stock;
-        private int reviewID;
-        private int imageID;
+        private String reviewID;
+        private String imageID;
 
-        public Builder setProductID(int productID){
+        public Builder setProductID(String productID){
             this.productID = productID;
             return this;
         }
 
-        public Builder setCategoryID(int categoryID){
+        public Builder setCategoryID(String categoryID){
             this.categoryID = categoryID;
             return this;
         }
@@ -150,12 +150,12 @@ public class Product {
             return this;
         }
 
-        public Builder setReviewID(int reviewID){
+        public Builder setReviewID(String reviewID){
             this.reviewID = reviewID;
             return this;
         }
 
-        public Builder setImageID(int imageID){
+        public Builder setImageID(String imageID){
             this.imageID = imageID;
             return this;
         }

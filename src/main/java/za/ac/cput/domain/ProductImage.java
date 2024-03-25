@@ -3,8 +3,8 @@ package za.ac.cput.domain;
 import java.sql.Blob;
 
 public class ProductImage {
-    private int imageID;
-    private int productID;
+    private String imageID;
+    private String productID;
     private Blob image;
 
     public ProductImage() {
@@ -17,19 +17,19 @@ public class ProductImage {
         this.image = builder.image;
     }
 
-    public int getImageID() {
+    public String getImageID() {
         return imageID;
     }
 
-    public void setImageID(int imageID) {
+    public void setImageID(String imageID) {
         this.imageID = imageID;
     }
 
-    public int getProductID() {
+    public String getProductID() {
         return productID;
     }
 
-    public void setProductID(int productID) {
+    public void setProductID(String productID) {
         this.productID = productID;
     }
 
@@ -51,16 +51,16 @@ public class ProductImage {
     }
 
     public static class Builder{
-        private int imageID;
-        private int productID;
+        private String imageID;
+        private String productID;
         private Blob image;
 
-        public Builder setImageID(int imageID){
+        public Builder setImageID(String imageID){
             this.imageID = imageID;
             return this;
         }
 
-        public Builder setProductID(int productID){
+        public Builder setProductID(String productID){
             this.productID = productID;
             return this;
         }
