@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66050056-f2e5-4366-92a9-75ee6d149b06" name="Changes" comment="Updated ID's from int to String for Product and ProductImage.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/ProductFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/ProductFactory.java" afterDir="false" />
+    <list default="true" id="66050056-f2e5-4366-92a9-75ee6d149b06" name="Changes" comment="Completed ProductRepositoryImpl and ProductImageRepositoryImpl.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +147,28 @@
       <option name="project" value="LOCAL" />
       <updated>1711385389390</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Project structure fixes.">
+      <created>1711385848472</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711385848472</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updated ID from int to String in ProductFactory and ProductImageFactory.">
+      <created>1711385900861</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711385900861</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Completed ProductRepositoryImpl and ProductImageRepositoryImpl.">
+      <created>1711390896305</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711390896305</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +181,9 @@
     <MESSAGE value="ProductFactory.java and ProductImageFactory.java factories complete." />
     <MESSAGE value="Folder structure fixes." />
     <MESSAGE value="Updated ID's from int to String for Product and ProductImage." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ID's from int to String for Product and ProductImage." />
+    <MESSAGE value="Project structure fixes." />
+    <MESSAGE value="Updated ID from int to String in ProductFactory and ProductImageFactory." />
+    <MESSAGE value="Completed ProductRepositoryImpl and ProductImageRepositoryImpl." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed ProductRepositoryImpl and ProductImageRepositoryImpl." />
   </component>
 </project>
