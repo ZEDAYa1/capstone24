@@ -3,8 +3,8 @@ package za.ac.cput.domain;
 /*
  *Customer:java
  *Customer: Model Class
- * Author:
- * Date:
+ * Author: Rethabile Ntsekhe (220455430)
+ * Date: 25 / March/2024
  */
 
 import java.util.ArrayList;
