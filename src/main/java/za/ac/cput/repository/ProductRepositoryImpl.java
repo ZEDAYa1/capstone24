@@ -1,4 +1,4 @@
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository;
 /*
  *Product:java
  *Product: ProductRepositoryImpl Class
@@ -6,7 +6,7 @@ package za.ac.cput.repository.impl;
  * Date: 21 March 2024
  */
 
-import za.ac.cput.repository.IRepository;
+import za.ac.cput.repository.impl.IRepository;
 
 public class ProductRepositoryImpl implements IRepository {
 
