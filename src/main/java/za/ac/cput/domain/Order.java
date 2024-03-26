@@ -165,12 +165,12 @@ public class Order {
          * and creates a copy
          */
         public Order.Builder copy(Order order) {
-            this.orderID = order.orderID;
-            this.orderDate = order.orderDate;
-            this.customer = order.customer;
-            this.orderItems = order.orderItems;
-            this.totalPrice = order.totalPrice;
-            this.status = order.status;
+            this.orderID = orderID;
+            this.orderDate = orderDate;
+            this.customer =customer;
+            this.orderItems = orderItems;
+            this.totalPrice = totalPrice;
+            this.status = status;
             return this;
         }
         public Order build(){
