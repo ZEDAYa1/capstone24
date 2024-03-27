@@ -9,6 +9,7 @@ package za.ac.cput.domain;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 
 public class Order {
     private int orderID;
@@ -98,6 +99,39 @@ public class Order {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Order)) return false;
+
+        Order order = (Order) o;
+
+        if (orderID != order.orderID) return false;
+        if (Double.compare(totalPrice, order.totalPrice) != 0) return false;
+        if (!orderDate.equals(order.orderDate)) return false;
+        if (!Objects.equals(customer, order.customer)) return false;
+        if (!orderItems.equals(order.orderItems)) return false;
+        if (!Objects.equals(status, order.status)) return false;
+        if (!addressID.equals(order.addressID)) return false;
+        return orderItemID.equals(order.orderItemID);
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = orderID;
+        result = 31 * result + orderDate.hashCode();
+        result = 31 * result + (customer != null ? customer.hashCode() : 0);
+        result = 31 * result + orderItems.hashCode();
+        temp = Double.doubleToLongBits(totalPrice);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (status != null ? status.hashCode() : 0);
+        result = 31 * result + addressID.hashCode();
+        result = 31 * result + orderItemID.hashCode();
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Order{" +
                 ", OrderID: " + orderID +
@@ -165,12 +199,12 @@ public class Order {
          * and creates a copy
          */
         public Order.Builder copy(Order order) {
-            this.orderID = order.orderID;
-            this.orderDate = order.orderDate;
-            this.customer = order.customer;
-            this.orderItems = order.orderItems;
-            this.totalPrice = order.totalPrice;
-            this.status = order.status;
+            this.orderID = orderID;
+            this.orderDate = orderDate;
+            this.customer =customer;
+            this.orderItems = orderItems;
+            this.totalPrice = totalPrice;
+            this.status = status;
             return this;
         }
         public Order build(){
