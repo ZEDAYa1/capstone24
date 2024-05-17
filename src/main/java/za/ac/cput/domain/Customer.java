@@ -7,15 +7,10 @@ package za.ac.cput.domain;
  * Date: 25 / March/2024
  */
 
-import java.util.ArrayList;
-
 public class Customer {
     private int customerId;
-    private String firstName;
-    private String lastName;
-    private ArrayList<String> email;
-    private String address;
-    private int phoneNumber;
+    private String privelages;
+    private int userID;
 
     public Customer() {
 
@@ -23,121 +18,70 @@ public class Customer {
 
     private Customer(Builder builder) {
         this.customerId = builder.customerId;
-        this.firstName = builder.firstName;
-        this.lastName = builder.lastName;
-        this.email = builder.email;
-        this.address = builder.address;
-        this.phoneNumber = builder.phoneNumber;
+        this.privelages = builder.privelages;
+        this.userID = builder.userID;
     }
 
-    public int getId() {
+    public int getCustomerId() {
         return customerId;
     }
 
-    public void setId(int id) {
-        this.customerId = id;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+    public String getPrivelages() {
+        return privelages;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public void setPrivelages(String privelages){
+        this.privelages = privelages;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public int getUserID() {
+        return userID;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public ArrayList<String> getEmail() {
-        return email;
-    }
-
-    public void setEmail(ArrayList<String> email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     @Override
     public String toString() {
         return "Customer: " +
                 "ID: " + customerId +
-                ", FirstName: '" + firstName + '\'' +
-                ", LastName: '" + lastName + '\'' +
-                ", Email: " + email +
-                ", Address: '" + address + '\'' +
-                ", PhoneNumber: " + phoneNumber +
+                ", Privelages: '" + privelages + '\'' +
+                ", User ID: " + userID +
                 '}';
     }
 
     public static class Builder{
         private int customerId;
-        private String firstName;
-        private String lastName;
-        private ArrayList<String> email;
-        private String address;
-        private int phoneNumber;
+        private String privelages;
+        private int userID;
 
         public Builder setCustomerId(int customerId) {
             this.customerId = customerId;
             return this;
         }
 
-        public Builder setFirstName(String firstName) {
-            this.firstName = firstName;
+        public Builder setprivelages(String privelages) {
+            this.privelages = privelages;
             return this;
         }
 
-        public Builder setLastName(String lastName) {
-            this.lastName = lastName;
+        public Builder setUserID(int userID) {
+            this.userID = userID;
             return this;
         }
 
-        public Builder setEmail(ArrayList<String> email) {
-            this.email = email;
-            return this;
-        }
-
-        public Builder setAddress(String address) {
-            this.address = address;
-            return this;
-        }
-
-        public Builder setPhoneNumber(int phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
-        }
         /*
          *so this method below takes the elements into the builder nested class
          * and creates a copy
          */
         public Customer.Builder copy(Customer customer) {
             this.customerId = customer.customerId;
-            this.firstName = customer.firstName;
-            this.lastName = customer.lastName;
-            this.email = customer.email;
-            this.address = customer.address;
-            this.phoneNumber = customer.phoneNumber;
+            this.privelages = customer.privelages;
+            this.userID = customer.userID;
             return this;
         }
         public Customer build(){
